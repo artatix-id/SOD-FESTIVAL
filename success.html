@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SOD — E-Tiket Berhasil</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<!-- Library untuk generate QR Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
   :root {
     --primary: #7c3aed; --primary-dark: #6B21A8; --primary-light: #EDE9FE;
@@ -55,7 +57,9 @@
   .divider-line { border-top: 2px dashed var(--card-border); position: absolute; top: 50%; width: 100%; transform: translateY(-50%); }
 
   .qr-section { text-align: center; padding-top: 10px; }
-  .qr-section img { width: 130px; height: 130px; margin-bottom: 12px; border: 1px solid var(--card-border); border-radius: 8px; padding: 5px; }
+  /* Styling untuk kontainer QR Code dinamis */
+  #qrcode { display: inline-block; padding: 10px; background: #fff; border: 1px solid var(--card-border); border-radius: 8px; margin-bottom: 12px; }
+  #qrcode img, #qrcode canvas { width: 130px !important; height: 130px !important; display: block; }
   .qr-section p { font-size: 12px; color: var(--text-muted); font-weight: 600; letter-spacing: 1px; }
 
   /* Bottom Bar */
@@ -114,7 +118,7 @@
       </div>
 
       <div class="qr-section">
-        <img src="qris.png" alt="QR Code Tiket">
+        <div id="qrcode"></div>
         <p>Scan di pintu masuk</p>
       </div>
     </div>
@@ -136,10 +140,26 @@
   const orderId = localStorage.getItem('orderId') ?? 'SOD-000';
   const cart = order.cart ?? { items: [], totalQty: 0 };
 
+  // Masukkan data ke HTML
   document.getElementById('orderId').textContent = orderId;
   document.getElementById('namaPemesan').textContent = order.nama || '-';
-  document.getElementById('jenisTiket').textContent = (cart.items??[]).map(i=>i.jenis).join(', ') || '-';
+  
+  const jenisTiketText = (cart.items ?? []).map(i => i.jenis).join(', ') || '-';
+  document.getElementById('jenisTiket').textContent = jenisTiketText;
   document.getElementById('jumlahTiket').textContent = cart.totalQty + ' Tiket';
+
+  // Buat data string untuk QR Code (bisa dibaca sebagai teks oleh scanner)
+  const qrData = `SOD FESTIVAL 2026\nOrder ID: ${orderId}\nNama: ${order.nama || '-'}\nTiket: ${jenisTiketText}\nJumlah: ${cart.totalQty}`;
+  
+  // Generate QR Code secara dinamis
+  new QRCode(document.getElementById("qrcode"), {
+    text: qrData,
+    width: 130,
+    height: 130,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
 
   // Opsional: Bersihkan localStorage setelah berhasil agar tidak bentrok jika pesan lagi
   // localStorage.removeItem('etatix_order');
