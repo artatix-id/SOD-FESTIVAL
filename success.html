@@ -132,13 +132,13 @@
 
 <script>
   // Ambil data pemesanan dari localStorage
-  var order = JSON.parse(localStorage.getItem('etatix_order') || '{}');
-  var orderId = localStorage.getItem('orderId') || 'SOD-000';
-  var cart = order.cart || { items: [], totalQty: 0 };
+  const order = JSON.parse(localStorage.getItem('etatix_order') ?? '{}');
+  const orderId = localStorage.getItem('orderId') ?? 'SOD-000';
+  const cart = order.cart ?? { items: [], totalQty: 0 };
 
   document.getElementById('orderId').textContent = orderId;
   document.getElementById('namaPemesan').textContent = order.nama || '-';
-  document.getElementById('jenisTiket').textContent = (cart.items || []).map(function(i) { return i.jenis; }).join(', ') || '-';
+  document.getElementById('jenisTiket').textContent = (cart.items??[]).map(i=>i.jenis).join(', ') || '-';
   document.getElementById('jumlahTiket').textContent = cart.totalQty + ' Tiket';
 
   // Opsional: Bersihkan localStorage setelah berhasil agar tidak bentrok jika pesan lagi
