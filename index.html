@@ -3,13 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>SOD FESTIVAL 2026</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -53,15 +49,8 @@ backdrop-filter:blur(12px);
 background:rgba(0,0,0,.15);
 }
 
-.logo{
-height:55px;
-}
-
-.menu-btn{
-font-size:35px;
-cursor:pointer;
-user-select:none;
-}
+.logo{height:55px;}
+.menu-btn{font-size:35px;cursor:pointer;user-select:none;}
 
 .hero{
 min-height:100vh;
@@ -85,11 +74,7 @@ animation:float 4s ease-in-out infinite;
 50%{transform:translateY(-12px);}
 }
 
-.hero p{
-font-size:18px;
-letter-spacing:2px;
-margin-bottom:15px;
-}
+.hero p{font-size:18px;letter-spacing:2px;margin-bottom:15px;}
 
 .section{
 padding:90px 20px;
@@ -107,7 +92,6 @@ letter-spacing:3px;
 margin-bottom:40px;
 }
 
-/* ==================== COUNTDOWN ==================== */
 .countdown-box{
 background:#0b67c2;
 padding:30px;
@@ -119,15 +103,8 @@ text-align:center;
 box-shadow:0 15px 40px rgba(0,0,0,.3);
 }
 
-.time{
-font-size:55px;
-font-weight:800;
-}
-
-.label{
-font-size:14px;
-letter-spacing:1px;
-}
+.time{font-size:55px;font-weight:800;}
+.label{font-size:14px;letter-spacing:1px;}
 
 .event-info{
 text-align:center;
@@ -136,21 +113,20 @@ font-size:22px;
 font-weight:700;
 }
 
-/* ==================== FEATURED SALE CARD ==================== */
 .featured-sale-wrapper{
 display:flex;
 justify-content:center;
+flex-wrap:wrap;
+gap:40px;
 margin-bottom:50px;
 }
 
 .featured-sale-card{
-width:380px;
+width:340px;
 max-width:100%;
 border-radius:24px;
 overflow:hidden;
-box-shadow:
-0 25px 60px rgba(0,0,0,.45),
-0 0 60px rgba(255,107,61,.15);
+box-shadow:0 25px 60px rgba(0,0,0,.45), 0 0 60px rgba(255,107,61,.15);
 position:relative;
 z-index:2;
 }
@@ -174,6 +150,8 @@ border-radius:50px;
 margin-bottom:14px;
 text-transform:uppercase;
 }
+
+.last-call-card .sale-badge{background:linear-gradient(135deg,#8A2BE2,#6B21A8);}
 
 .sale-title{
 font-size:26px;
@@ -211,6 +189,9 @@ background:linear-gradient(160deg,#6B21A8 0%,#581C87 100%);
 border-radius:50%;
 }
 
+.last-call-card .sale-separator::before,
+.last-call-card .sale-separator::after{background:#10b981;}
+
 .sale-separator::before{left:-14px;}
 .sale-separator::after{right:-14px;}
 
@@ -220,17 +201,15 @@ padding:24px 28px 28px;
 text-align:center;
 }
 
+.last-call-card .sale-card-bottom{background:linear-gradient(180deg, #10b981 0%, #047857 100%);}
+
 .sale-pass-item{
 margin-bottom:16px;
 padding-bottom:16px;
 border-bottom:1px solid rgba(255,255,255,.2);
 }
 
-.sale-pass-item:last-of-type{
-margin-bottom:20px;
-padding-bottom:0;
-border-bottom:none;
-}
+.sale-pass-item:last-of-type{margin-bottom:20px;padding-bottom:0;border-bottom:none;}
 
 .sale-pass-name{
 font-size:18px;
@@ -248,18 +227,8 @@ color:#fff;
 letter-spacing:-.01em;
 }
 
-.sale-pass-price span{
-font-size:13px;
-font-weight:600;
-opacity:.85;
-margin-right:2px;
-}
-
-.sale-pass-name.daily{
-font-size:15px;
-font-weight:700;
-opacity:.9;
-}
+.sale-pass-price span{font-size:13px;font-weight:600;opacity:.85;margin-right:2px;}
+.sale-pass-name.daily{font-size:15px;font-weight:700;opacity:.9;}
 
 .sale-buy-btn{
 display:block;
@@ -282,15 +251,16 @@ text-decoration:none;
 text-align:center;
 }
 
+.last-call-card .sale-buy-btn{color:#047857;}
+
 .sale-buy-btn:hover{
 transform:translateY(-2px);
 box-shadow:0 8px 30px rgba(0,0,0,.25);
 background:#FFF8F0;
 }
 
-.sale-buy-btn:active{
-transform:translateY(0);
-}
+.last-call-card .sale-buy-btn:hover{background:#F0FDF4;}
+.sale-buy-btn:active{transform:translateY(0);}
 
 .sale-availability{
 display:flex;
@@ -318,11 +288,10 @@ animation:pulse-dot 2s ease-in-out infinite;
 font-size:12px;
 font-weight:700;
 color:#fff;
-letter-spacing:.15em;
+letter-spacing:.1em;
 text-transform:uppercase;
 }
 
-/* ==================== TICKET GRID ==================== */
 .ticket-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -336,9 +305,7 @@ box-shadow:0 20px 40px rgba(0,0,0,.25);
 transition:.4s;
 }
 
-.ticket:hover{
-transform:translateY(-10px);
-}
+.ticket:hover{transform:translateY(-10px);}
 
 .ticket-head{
 background:#fff;
@@ -348,20 +315,12 @@ font-size:32px;
 font-weight:800;
 }
 
-.ticket-body{
-padding:40px;
-text-align:center;
-}
-
+.ticket-body{padding:40px;text-align:center;}
 .orange{background:#ff6b3d;}
 .green{background:#09b57b;}
 .blue{background:#145bc8;}
 
-.price{
-font-size:55px;
-font-weight:800;
-margin-bottom:20px;
-}
+.price{font-size:55px;font-weight:800;margin-bottom:20px;}
 
 .buy-btn{
 display:inline-block;
@@ -379,7 +338,20 @@ transform:scale(1.05);
 box-shadow:0 8px 25px rgba(0,0,0,.3);
 }
 
-/* ==================== SPOTIFY ==================== */
+.ticket.sold-out .ticket-head{color:#888;}
+.ticket.sold-out .ticket-body{opacity:.6;filter:grayscale(70%);}
+
+.sold-out-btn{
+display:inline-block;
+padding:16px 40px;
+border-radius:15px;
+background:#555;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+cursor:not-allowed;
+}
+
 .spotify{
 background:rgba(0,0,0,.25);
 backdrop-filter:blur(10px);
@@ -387,7 +359,6 @@ padding:40px;
 border-radius:30px;
 }
 
-/* ==================== GALLERY ==================== */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -402,11 +373,8 @@ border-radius:25px;
 transition:.4s;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+.gallery img:hover{transform:scale(1.05);}
 
-/* ==================== ABOUT ==================== */
 .about-box{
 background:rgba(0,0,0,.25);
 padding:40px;
@@ -416,10 +384,7 @@ text-align:center;
 line-height:1.9;
 }
 
-/* ==================== CONTACT ==================== */
-.contact{
-text-align:center;
-}
+.contact{text-align:center;}
 
 .contact a{
 color:#ffd966;
@@ -429,12 +394,8 @@ margin:10px 0;
 transition:.3s;
 }
 
-.contact a:hover{
-color:#ffe699;
-text-decoration:underline;
-}
+.contact a:hover{color:#ffe699;text-decoration:underline;}
 
-/* ==================== FOOTER ==================== */
 .footer{
 text-align:center;
 padding:60px 20px;
@@ -443,7 +404,6 @@ position:relative;
 z-index:1;
 }
 
-/* ==================== SCROLL TOP ==================== */
 .scrolltop{
 position:fixed;
 right:20px;
@@ -469,7 +429,6 @@ transform:translateY(-3px);
 box-shadow:0 14px 35px rgba(0,0,0,.5);
 }
 
-/* ==================== TOAST ==================== */
 .toast{
 position:fixed;
 bottom:40px;
@@ -496,207 +455,251 @@ opacity:1;
 transform:translateX(-50%) translateY(0);
 }
 
-/* ==================== RESPONSIVE ==================== */
+
+.modal-overlay {
+display: none;
+position: fixed;
+top: 0; left: 0; width: 100%; height: 100%;
+background: rgba(0,0,0,0.7);
+z-index: 10000;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+overflow-y: auto;
+}
+.modal-overlay.active { display: flex; }
+.modal-content {
+background: #fff;
+width: 100%;
+max-width: 500px;
+border-radius: 16px;
+overflow: hidden;
+margin-top: 40px;
+box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+position: relative;
+animation: slideDown 0.4s ease;
+}
+@keyframes slideDown {
+from { transform: translateY(-50px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+.modal-banner img { width: 100%; height: 200px; object-fit: cover; display:block; }
+.modal-close {
+position: absolute;
+top: 15px; right: 15px;
+background: rgba(0,0,0,0.6);
+color: #fff;
+width: 36px; height: 36px;
+border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+cursor: pointer; font-size: 20px;
+border:none;
+z-index: 2;
+}
+.modal-body { padding: 24px; }
+.modal-body h2 { font-size: 22px; font-weight: 800; margin-bottom: 20px; color: #1a1a1a; text-align:center; }
+
+.ticket-item {
+display: flex; justify-content: space-between; align-items: center;
+padding: 16px; border: 1px solid #eee; border-radius: 10px; margin-bottom: 12px;
+background: #fff;
+}
+.ticket-item-left { flex: 1; padding-right: 15px;}
+.ticket-status { display: inline-block; background: #10b981; color: #fff; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
+.ticket-name { font-weight: 700; font-size: 16px; color: #1a1a1a; margin-bottom: 4px; }
+.ticket-desc { font-size: 12px; color: #666; margin-bottom: 6px; line-height: 1.4; }
+.ticket-price { font-weight: 800; color: #E6007E; font-size: 16px; }
+
+
+.ticket-item-right { display: flex; align-items: center; justify-content: flex-end; }
+.select-ticket-btn {
+padding: 10px 18px;
+border-radius: 8px;
+border: 1px solid #005ce6;
+background: #fff;
+color: #005ce6;
+font-weight: 700;
+cursor: pointer;
+transition: 0.2s;
+font-family: 'Poppins', sans-serif;
+font-size: 13px;
+white-space: nowrap;
+}
+.select-ticket-btn:hover { background: #f0f6ff; }
+
+.qty-stepper { display: none; align-items: center; gap: 10px; background: #f0f6ff; padding: 6px 10px; border-radius: 8px; }
+.qty-stepper.active { display: flex; }
+.qty-btn {
+width: 30px; height: 30px; border-radius: 6px; border: none;
+background: #005ce6; color: #fff; font-weight: 800; cursor: pointer;
+display: flex; align-items: center; justify-content: center; font-size: 18px; line-height: 1;
+}
+.qty-btn:hover { background: #004abf; }
+.qty-val { min-width: 25px; text-align: center; font-weight: 800; color: #1a1a1a; font-size: 16px; }
+
+.modal-footer {
+padding: 20px 24px;
+border-top: 1px solid #eee;
+display: flex; justify-content: space-between; align-items: center;
+background: #f8f8f8;
+}
+.modal-total { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+.modal-total span { color: #E6007E; font-size: 20px; display: block; margin-top: 4px; }
+.modal-buy-btn {
+background: #005ce6; color: #fff; border: none;
+padding: 14px 28px; border-radius: 8px; font-weight: 800;
+cursor: pointer; transition: 0.2s; font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+.modal-buy-btn:disabled { background: #a0c4f1; cursor: not-allowed; }
+.modal-buy-btn:not(:disabled):hover { background: #004abf; }
+
 @media(max-width:768px){
-
-.title{
-font-size:42px;
-}
-
-.countdown-box{
-grid-template-columns:repeat(2,1fr);
-}
-
-.time{
-font-size:40px;
-}
-
-.price{
-font-size:40px;
-}
-
-.featured-sale-card{
-width:340px;
-}
-
-.sale-title{
-font-size:22px;
-}
-
-.sale-pass-name{
-font-size:16px;
-}
-
-.sale-pass-price{
-font-size:20px;
-}
-
-.gallery img{
-height:260px;
-}
-
+.title{font-size:42px;}
+.countdown-box{grid-template-columns:repeat(2,1fr);}
+.time{font-size:40px;}
+.price{font-size:40px;}
+.featured-sale-card{width:340px;}
+.sale-title{font-size:22px;}
+.sale-pass-name{font-size:16px;}
+.sale-pass-price{font-size:20px;}
+.gallery img{height:260px;}
 }
 
 @media(max-width:400px){
-
-.featured-sale-card{
-width:300px;
+.featured-sale-card{width:300px;}
+.sale-card-top{padding:24px 20px 18px;}
+.sale-card-bottom{padding:20px 20px 24px;}
+.sale-title{font-size:20px;}
+.modal-footer { flex-direction: column; gap: 15px; }
+.modal-buy-btn { width: 100%; }
 }
-
-.sale-card-top{
-padding:24px 20px 18px;
-}
-
-.sale-card-bottom{
-padding:20px 20px 24px;
-}
-
-.sale-title{
-font-size:20px;
-}
-
-}
-
 </style>
 </head>
 <body>
 
 <header>
-
 <img src="logo.png" class="logo" alt="Logo">
-
 <div class="menu-btn" id="menuBtn" aria-label="Menu">☰</div>
-
 </header>
 
-<!-- ==================== HERO ==================== -->
 <section class="hero">
-
 <p>SOUND OF DOWNTOWN FESTIVAL</p>
-
 <img src="poster.png" class="hero-logo" alt="Hero Logo">
-
 </section>
 
-<!-- ==================== COUNTDOWN ==================== -->
 <section class="section">
-
 <h2 class="title">MENUJU EVENT</h2>
-
 <div class="countdown-box">
-
-<div>
-<div id="days" class="time">00</div>
-<div class="label">HARI</div>
+<div><div id="days" class="time">00</div><div class="label">HARI</div></div>
+<div><div id="hours" class="time">00</div><div class="label">JAM</div></div>
+<div><div id="minutes" class="time">00</div><div class="label">MENIT</div></div>
+<div><div id="seconds" class="time">00</div><div class="label">DETIK</div></div>
 </div>
-
-<div>
-<div id="hours" class="time">00</div>
-<div class="label">JAM</div>
-</div>
-
-<div>
-<div id="minutes" class="time">00</div>
-<div class="label">MENIT</div>
-</div>
-
-<div>
-<div id="seconds" class="time">00</div>
-<div class="label">DETIK</div>
-</div>
-
-</div>
-
 <div class="event-info">
 1 & 2 AGUSTUS 2026 | INDONESIA
 </div>
-
 </section>
 
-<!-- ==================== TICKETS ==================== -->
 <section class="section">
-
 <h2 class="title">TICKETS</h2>
 
-<!-- Featured Sale Card -->
+<div class="featured-sale-wrapper">
+<div class="featured-sale-card last-call-card">
+<div class="sale-card-top">
+<div class="sale-badge">🔥 Last Chance</div>
+<div class="sale-title">LAST CALL<br>DAY 1</div>
+<div class="sale-subtitle">Limited Time Offer</div>
+</div>
+<hr class="sale-separator">
+<div class="sale-card-bottom">
+<div class="sale-pass-item">
+<div class="sale-pass-name">Daily Pass</div>
+<div class="sale-pass-price"><span>IDR</span> 299.900</div>
+</div>
+<a href="#" class="sale-buy-btn">BUY TICKET</a>
+<div class="sale-availability">
+<span class="green-dot"></span>
+<span class="sale-avail-text">AVAILABLE 21 JULY 2026</span>
+</div>
+</div>
+</div>
+
+<div class="featured-sale-card last-call-card">
+<div class="sale-card-top">
+<div class="sale-badge">🔥 Last Chance</div>
+<div class="sale-title">LAST CALL<br>DAY 2</div>
+<div class="sale-subtitle">Limited Time Offer</div>
+</div>
+<hr class="sale-separator">
+<div class="sale-card-bottom">
+<div class="sale-pass-item">
+<div class="sale-pass-name">Daily Pass</div>
+<div class="sale-pass-price"><span>IDR</span> 299.900</div>
+</div>
+<a href="#" class="sale-buy-btn">BUY TICKET</a>
+<div class="sale-availability">
+<span class="green-dot"></span>
+<span class="sale-avail-text">AVAILABLE 21 JULY 2026</span>
+</div>
+</div>
+</div>
+</div>
+
 <div class="featured-sale-wrapper">
 <div class="featured-sale-card">
-
 <div class="sale-card-top">
 <div class="sale-badge">🔥 Last Chance</div>
 <div class="sale-title">NORMAL SALE<br>TERAKHIR</div>
 <div class="sale-subtitle">Limited Time Offer</div>
 </div>
-
 <hr class="sale-separator">
-
 <div class="sale-card-bottom">
 <div class="sale-pass-item">
 <div class="sale-pass-name">2 Days Pass</div>
 <div class="sale-pass-price"><span>IDR</span> 395.000</div>
 </div>
-
 <div class="sale-pass-item">
 <div class="sale-pass-name daily">Daily Pass</div>
 </div>
-
-<a href="https://onlinetiketdigital.github.io/FROM-SODFESTIVAL/" class="sale-buy-btn" id="saleBuyBtn">
-BUY TICKET
-</a>
-
+<a href="#" class="sale-buy-btn">BUY TICKET</a>
 <div class="sale-availability">
 <span class="green-dot"></span>
 <span class="sale-avail-text">AVAILABLE</span>
 </div>
 </div>
-
 </div>
 </div>
 
-<!-- Existing Ticket Grid -->
 <div class="ticket-grid">
-
-<div class="ticket">
+<div class="ticket sold-out">
 <div class="ticket-head">EARLY BIRD</div>
 <div class="ticket-body orange">
 <div class="price">199K</div>
-<a href="https://onlinetiketdigital.github.io/FROM-SODFESTIVAL/" class="buy-btn">
-BELI TIKET
-</a>
+<span class="sold-out-btn">SOLD OUT</span>
 </div>
 </div>
-
-<div class="ticket">
+<div class="ticket sold-out">
 <div class="ticket-head">PRESALE 1</div>
 <div class="ticket-body green">
 <div class="price">249K</div>
-<a href="https://onlinetiketdigital.github.io/FROM-SODFESTIVAL/" class="buy-btn">
-BELI TIKET
-</a>
+<span class="sold-out-btn">SOLD OUT</span>
 </div>
 </div>
-
-<div class="ticket">
+<div class="ticket sold-out">
 <div class="ticket-head">PRESALE 2</div>
 <div class="ticket-body blue">
 <div class="price">299K</div>
-<a href="https://onlinetiketdigital.github.io/FROM-SODFESTIVAL/" class="buy-btn">
-BELI TIKET
-</a>
+<span class="sold-out-btn">SOLD OUT</span>
 </div>
 </div>
-
 </div>
-
 </section>
 
-<!-- ==================== SPOTIFY ==================== -->
 <section class="section">
-
 <h2 class="title">PLAYLIST EVENT</h2>
-
 <div class="spotify">
-
 <iframe style="border-radius:20px"
 src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M"
 width="100%"
@@ -705,36 +708,24 @@ frameborder="0"
 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 loading="lazy">
 </iframe>
-
 </div>
-
 </section>
 
-<!-- ==================== GALLERY ==================== -->
 <section class="section">
-
 <h2 class="title">GALERI</h2>
-
 <div class="gallery">
-
 <img src="galeri1.jpg" alt="Galeri 1" loading="lazy">
 <img src="galeri2.jpg" alt="Galeri 2" loading="lazy">
 <img src="galeri3.jpg" alt="Galeri 3" loading="lazy">
 <img src="galeri4.jpg" alt="Galeri 4" loading="lazy">
 <img src="galeri5.jpg" alt="Galeri 5" loading="lazy">
 <img src="galeri6.jpg" alt="Galeri 6" loading="lazy">
-
 </div>
-
 </section>
 
-<!-- ==================== ABOUT ==================== -->
 <section class="section">
-
 <h2 class="title">ABOUT US</h2>
-
 <div class="about-box">
-
 <p>
 Selamat datang di festival musik dan hiburan terbesar.
 Nikmati pengalaman konser spektakuler, penampilan artis terbaik,
@@ -742,124 +733,304 @@ kuliner, komunitas kreatif, dan berbagai aktivitas menarik lainnya.
 Website ini dibuat dengan konsep modern bertema ungu seperti
 festival profesional masa kini.
 </p>
-
 </div>
-
 </section>
 
-<!-- ==================== CONTACT ==================== -->
 <section class="section contact">
-
 <h2 class="title">HUBUNGI KAMI</h2>
-
 <a href="mailto:hello@email.com">hello@email.com</a>
 <a href="mailto:support@email.com">support@email.com</a>
-
 </section>
 
-<!-- ==================== FOOTER ==================== -->
 <footer class="footer">
-
 © 2026 ALL RIGHTS RESERVED
-
 </footer>
 
-<!-- ==================== SCROLL TOP ==================== -->
 <button class="scrolltop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
 ↑
 </button>
 
-<!-- ==================== TOAST ==================== -->
 <div class="toast" id="toast"></div>
 
-<!-- ==================== SCRIPTS ==================== -->
+
+<div id="ticketModal" class="modal-overlay">
+<div class="modal-content">
+<button class="modal-close" onclick="closeModal()">&times;</button>
+<div class="modal-banner">
+<img src="banner.png" alt="Banner Event">
+</div>
+<div class="modal-body">
+<h2>Available Tickets</h2>
+
+<div class="ticket-item">
+<div class="ticket-item-left">
+<span class="ticket-status">AVAILABLE</span>
+<div class="ticket-name">Last Call - Day 1</div>
+<div class="ticket-desc">Tiket masuk untuk satu hari (Day 1). Tidak termasuk pajak.</div>
+<div class="ticket-price">Rp 299.900</div>
+</div>
+<div class="ticket-item-right">
+<button class="select-ticket-btn" data-nama="Last Call - Day 1" data-harga="299900">Pilih Tiket</button>
+<div class="qty-stepper">
+<button class="qty-btn qty-minus">-</button>
+<span class="qty-val">0</span>
+<button class="qty-btn qty-plus">+</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-item">
+<div class="ticket-item-left">
+<span class="ticket-status">AVAILABLE</span>
+<div class="ticket-name">Last Call - Day 2</div>
+<div class="ticket-desc">Tiket masuk untuk satu hari (Day 2). Tidak termasuk pajak.</div>
+<div class="ticket-price">Rp 299.900</div>
+</div>
+<div class="ticket-item-right">
+<button class="select-ticket-btn" data-nama="Last Call - Day 2" data-harga="299900">Pilih Tiket</button>
+<div class="qty-stepper">
+<button class="qty-btn qty-minus">-</button>
+<span class="qty-val">0</span>
+<button class="qty-btn qty-plus">+</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-item">
+<div class="ticket-item-left">
+<span class="ticket-status">AVAILABLE</span>
+<div class="ticket-name">Last Call - 2 Days Pass</div>
+<div class="ticket-desc">Tiket masuk untuk 2 hari (Day 1 & Day 2). Tidak bisa di-refund.</div>
+<div class="ticket-price">Rp 399.900</div>
+</div>
+<div class="ticket-item-right">
+<button class="select-ticket-btn" data-nama="Last Call - 2 Days Pass" data-harga="399900">Pilih Tiket</button>
+<div class="qty-stepper">
+<button class="qty-btn qty-minus">-</button>
+<span class="qty-val">0</span>
+<button class="qty-btn qty-plus">+</button>
+</div>
+</div>
+</div>
+
+</div>
+<div class="modal-footer">
+<div class="modal-total">Total Pembayaran<span id="modalTotal">Rp 0</span></div>
+<button id="modalBuyBtn" class="modal-buy-btn" disabled>BELI TIKET</button>
+</div>
+</div>
+</div>
+
 <script>
-
 (function(){
-
 "use strict";
 
-/* ---------- Countdown Timer ---------- */
 const countDownDate = new Date("Aug 1, 2026 00:00:00").getTime();
-
-const daysEl    = document.getElementById("days");
-const hoursEl   = document.getElementById("hours");
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
 function updateCountdown(){
-  const now = new Date().getTime();
-  const distance = countDownDate - now;
+const now = new Date().getTime();
+const distance = countDownDate - now;
 
-  if(distance < 0){
-    daysEl.innerHTML    = "00";
-    hoursEl.innerHTML   = "00";
-    minutesEl.innerHTML = "00";
-    secondsEl.innerHTML = "00";
-    return;
-  }
+if(distance < 0){
+daysEl.innerHTML = "00";
+hoursEl.innerHTML = "00";
+minutesEl.innerHTML = "00";
+secondsEl.innerHTML = "00";
+return;
+}
 
-  daysEl.innerHTML    = String(Math.floor(distance / (1000*60*60*24))).padStart(2,"0");
-  hoursEl.innerHTML   = String(Math.floor((distance % (1000*60*60*24)) / (1000*60*60))).padStart(2,"0");
-  minutesEl.innerHTML = String(Math.floor((distance % (1000*60*60)) / (1000*60))).padStart(2,"0");
-  secondsEl.innerHTML = String(Math.floor((distance % (1000*60)) / 1000)).padStart(2,"0");
+daysEl.innerHTML = String(Math.floor(distance / (1000*60*60*24))).padStart(2,"0");
+hoursEl.innerHTML = String(Math.floor((distance % (1000*60*60*24)) / (1000*60*60))).padStart(2,"0");
+minutesEl.innerHTML = String(Math.floor((distance % (1000*60*60)) / (1000*60))).padStart(2,"0");
+secondsEl.innerHTML = String(Math.floor((distance % (1000*60)) / 1000)).padStart(2,"0");
 }
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-/* ---------- Toast ---------- */
 const toastEl = document.getElementById("toast");
 let toastTimer = null;
 
 function showToast(message){
-  if(toastTimer) clearTimeout(toastTimer);
-  toastEl.textContent = message;
-  toastEl.classList.add("show");
-  toastTimer = setTimeout(function(){
-    toastEl.classList.remove("show");
-  }, 2500);
+if(toastTimer) clearTimeout(toastTimer);
+toastEl.textContent = message;
+toastEl.classList.add("show");
+toastTimer = setTimeout(function(){
+toastEl.classList.remove("show");
+}, 2500);
 }
 
-/* ---------- Sale Buy Button ---------- */
-const saleBuyBtn = document.getElementById("saleBuyBtn");
-if(saleBuyBtn){
-  saleBuyBtn.addEventListener("click", function(e){
-    e.preventDefault();
-    showToast("🎟️ Mengarahkan ke halaman pembayaran...");
-    setTimeout(function(){
-      window.location.href = saleBuyBtn.href;
-    }, 1200);
-  });
-}
+const buyButtons = document.querySelectorAll(".sale-buy-btn, .buy-btn");
+buyButtons.forEach(function(btn){
+btn.addEventListener("click", function(e){
+e.preventDefault();
+openModal();
+});
+});
 
-/* ---------- Menu Button (simple toggle placeholder) ---------- */
+const soldOutBtns = document.querySelectorAll(".sold-out-btn");
+soldOutBtns.forEach(function(btn){
+btn.addEventListener("click", function(e){
+e.preventDefault();
+showToast("🚫 Maaf, tiket ini sudah SOLD OUT!");
+});
+});
+
 const menuBtn = document.getElementById("menuBtn");
 if(menuBtn){
-  menuBtn.addEventListener("click", function(){
-    showToast("📋 Menu segera hadir!");
-  });
+menuBtn.addEventListener("click", function(){
+showToast("📋 Menu segera hadir!");
+});
 }
 
-/* ---------- Scroll Top Button Visibility ---------- */
 const scrollBtn = document.querySelector(".scrolltop");
 if(scrollBtn){
-  window.addEventListener("scroll", function(){
-    if(window.scrollY > 600){
-      scrollBtn.style.opacity = "1";
-      scrollBtn.style.pointerEvents = "auto";
-    } else {
-      scrollBtn.style.opacity = "0";
-      scrollBtn.style.pointerEvents = "none";
-    }
-  });
-  scrollBtn.style.opacity = "0";
-  scrollBtn.style.pointerEvents = "none";
-  scrollBtn.style.transition = "opacity .3s, transform .3s";
+window.addEventListener("scroll", function(){
+if(window.scrollY > 600){
+scrollBtn.style.opacity = "1";
+scrollBtn.style.pointerEvents = "auto";
+} else {
+scrollBtn.style.opacity = "0";
+scrollBtn.style.pointerEvents = "none";
+}
+});
+scrollBtn.style.opacity = "0";
+scrollBtn.style.pointerEvents = "none";
+scrollBtn.style.transition = "opacity .3s, transform .3s";
 }
 
-})();
 
+const modal = document.getElementById("ticketModal");
+const selectBtns = document.querySelectorAll(".select-ticket-btn");
+const modalBuyBtn = document.getElementById("modalBuyBtn");
+const modalTotalEl = document.getElementById("modalTotal");
+
+function openModal() {
+modal.classList.add("active");
+document.body.style.overflow = "hidden"; 
+}
+
+function closeModal() {
+modal.classList.remove("active");
+document.body.style.overflow = "auto"; 
+}
+
+modal.addEventListener("click", function(e) {
+if(e.target === modal) {
+closeModal();
+}
+});
+
+let selectedTicket = null;
+
+function updateModalState() {
+if (selectedTicket && selectedTicket.qty > 0) {
+modalBuyBtn.disabled = false;
+modalTotalEl.innerText = "Rp " + selectedTicket.total.toLocaleString("id-ID");
+} else {
+modalBuyBtn.disabled = true;
+modalTotalEl.innerText = "Rp 0";
+}
+}
+
+// Fungsi saat tombol "Pilih Tiket" diklik
+selectBtns.forEach(btn => {
+btn.addEventListener("click", function() {
+const parent = this.parentElement;
+const stepper = parent.querySelector(".qty-stepper");
+const qtyVal = parent.querySelector(".qty-val");
+
+// Sembunyikan tombol pilih lainnya & reset stepper jika ada yang aktif
+document.querySelectorAll(".ticket-item-right").forEach(item => {
+if (item !== parent) {
+const otherBtn = item.querySelector(".select-ticket-btn");
+const otherStepper = item.querySelector(".qty-stepper");
+const otherVal = item.querySelector(".qty-val");
+otherBtn.style.display = "block";
+otherStepper.classList.remove("active");
+otherVal.innerText = "0";
+}
+});
+
+// Tampilkan stepper untuk tiket ini, sembunyikan tombol pilih
+this.style.display = "none";
+stepper.classList.add("active");
+qtyVal.innerText = "1"; // Mulai dari 1
+
+// Set tiket yang dipilih
+selectedTicket = {
+nama: this.dataset.nama,
+harga: parseInt(this.dataset.harga),
+qty: 1,
+total: parseInt(this.dataset.harga) * 1
+};
+
+updateModalState();
+});
+});
+
+// Fungsi tombol Plus (+)
+document.querySelectorAll(".qty-plus").forEach(btn => {
+btn.addEventListener("click", function() {
+const valEl = this.parentElement.querySelector(".qty-val");
+let qty = parseInt(valEl.innerText);
+qty++;
+valEl.innerText = qty;
+
+selectedTicket.qty = qty;
+selectedTicket.total = selectedTicket.harga * qty;
+updateModalState();
+});
+});
+
+// Fungsi tombol Minus (-)
+document.querySelectorAll(".qty-minus").forEach(btn => {
+btn.addEventListener("click", function() {
+const valEl = this.parentElement.querySelector(".qty-val");
+const parentRight = this.parentElement.parentElement;
+const selectBtn = parentRight.querySelector(".select-ticket-btn");
+
+let qty = parseInt(valEl.innerText);
+qty--;
+
+if (qty <= 0) {
+// Jika 0, kembalikan ke tombol "Pilih Tiket"
+qty = 0;
+valEl.innerText = "0";
+this.parentElement.classList.remove("active");
+selectBtn.style.display = "block";
+selectedTicket = null;
+} else {
+valEl.innerText = qty;
+selectedTicket.qty = qty;
+selectedTicket.total = selectedTicket.harga * qty;
+}
+
+updateModalState();
+});
+});
+
+// Fungsi tombol BELI TIKET (Redirect)
+modalBuyBtn.addEventListener("click", function() {
+if (!selectedTicket) return;
+
+showToast("🎟️ Mengarahkan ke halaman pemesanan...");
+setTimeout(function() {
+const params = new URLSearchParams({
+nama: selectedTicket.nama,
+qty: selectedTicket.qty,
+harga: selectedTicket.harga,
+total: selectedTicket.total
+});
+window.location.href = "form.html?" + params.toString();
+}, 1000);
+});
+
+})();
 </script>
 
 </body>
